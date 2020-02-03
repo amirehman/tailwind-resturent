@@ -1,0 +1,124 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import url('https://fonts.googleapis.com/css?family=Tajawal:200,300,400,500,700,800,900&display=swap&subset=arabic');
+//@import "compass/reset";
+// @import "queries";
+body {
+    // background-image: linear-gradient(315deg, #f6f6f6 0%, #e9e9e9 74%);
+    font-family: 'Tajawal', sans-serif;
+}
+
+$themeColor-light: #FFC000;
+$themeColor: #FEB201;
+$themeColor-dark: #FD9D00;
+.bg-theme-color {
+    background-color: $themeColor;
+    background-image: linear-gradient(315deg, $themeColor-dark 0%, $themeColor 74%);
+}
+
+.bg-theme-color-hover {
+    transition: 0.3s;
+    &:hover {
+        background-image: linear-gradient(315deg, $themeColor-dark 0%, $themeColor 74%);
+    }
+}
+
+.h-screen-25 {
+    height: 25vh;
+}
+
+.h-screen-50 {
+    height: 50vh;
+}
+
+.h-screen-75 {
+    height: 75vh;
+}
+
+.theme-color {
+    color: $themeColor;
+    a {
+        color: $themeColor;
+        &:hover {
+            color: $themeColor-dark;
+        }
+    }
+    &:hover {
+        color: $themeColor-dark;
+    }
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
+}
+
+.home-header-cover {
+    background-color: $themeColor;
+    background-image: linear-gradient(190deg, $themeColor 0%, darken($themeColor-dark, 1%) 100%);
+    overflow: hidden;
+}
+
+.circle-color {
+    right: -15%;
+    bottom: -15%;
+    width: 100vh;
+    height: 100vh;
+    background: $themeColor-light;
+    border-radius: 50%;
+}
+
+.dropdown-inner {
+    opacity: 0;
+    z-index: -1;
+    transition: all .2s ease-in-out;
+    li {
+        a {
+            border-bottom: 1px solid rgba(203, 203, 203, 0.173)
+        }
+        &:last-child {
+            a {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.navbar-top-links-dropdown-wrapper {
+    cursor: pointer;
+    &:hover {
+        .dropdown-inner {
+            transform: scale(1.1);
+            opacity: 1;
+            z-index: 11;
+        }
+    }
+}
+
+.megamenu-wrapper {
+    top: 100%;
+    left: 0px;
+    width: 700px;
+    background-color: white;
+    opacity: 0;
+    z-index: -11;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
+    .megamenu {
+        background: url(../../images/resturent.png) repeat center;
+        li {
+            a {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.megamenu-active {
+    transform: scale(1.1);
+    opacity: 1;
+    z-index: 11;
+    visibility: visible;
+}
