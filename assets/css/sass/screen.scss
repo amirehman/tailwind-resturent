@@ -124,6 +124,7 @@ $themeColor-dark: #FD9D00;
     z-index: -11;
     visibility: hidden;
     transition: all .2s ease-in-out;
+    position: absolute;
     .megamenu {
         background: url(../../images/resturent.png) repeat center;
         li {
@@ -133,7 +134,12 @@ $themeColor-dark: #FD9D00;
         }
     }
     @include screentwo-max {
-        // width: 100%!important;
+        position: fixed;
+        top: inherit;
+        width: 100%;
+        bottom: -400px;
+        left: 0px;
+        z-index: 11;
     }
 }
 
@@ -142,6 +148,10 @@ $themeColor-dark: #FD9D00;
     opacity: 1;
     z-index: 11;
     visibility: visible;
+    @include screentwo-max {
+        transform: scale(1);
+        bottom: 0px;
+    }
 }
 
 .swiper-container {
