@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
 
 
     // ---------------------- //
-    var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('.top-cover-swiper-container', {
         slidesPerView: 'auto',
         effect: 'fade',
         loop: true,
@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
             crossFade: true
         },
         pagination: {
-            el: '.swiper-pagination',
+            el: '.cover-swiper-pagination',
             clickable: true,
             renderBullet: function(index, className) {
                 return '<span class="' + className + '">' + (index + 1) + '</span>';
@@ -42,6 +42,37 @@ jQuery(document).ready(function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+    })
+
+    // ---------------------- //
+    var mySwiper = new Swiper('.news-swiper-container', {
+        slidesPerView: 'auto',
+        effect: 'fade',
+        loop: true,
+        fadeEffect: {
+            crossFade: true
+        },
+        navigation: {
+            nextEl: '.news-swiper-button-next',
+            prevEl: '.news-swiper-button-prev',
+        },
+    })
+
+    // ---------------------- //
+    var mySwiper = new Swiper('.partner-swiper-container', {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        loop: true,
+        navigation: {
+            nextEl: '.partner-swiper-button-next',
+            prevEl: '.partner-swiper-button-prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 15,
+            }
+        }
     })
 
 })

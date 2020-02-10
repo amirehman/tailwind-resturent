@@ -36,10 +36,41 @@ $themeColor-dark: #FD9D00;
 
 .h-screen-75 {
     height: 75vh;
+    &.fullwidth {
+        @include screentwo-max {
+            height: 100vh;
+        }
+    }
 }
 
 .h-screen-85 {
     height: 85vh;
+}
+
+.border-w-trans-2 {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.border-w-trans-3 {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.bg-trans-8-hover {
+    &:hover {
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.bg-trans-500 {
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
 }
 
 .theme-color {
@@ -55,8 +86,16 @@ $themeColor-dark: #FD9D00;
     }
 }
 
+.transition {
+    transition: 0.3s;
+}
+
 .text-shadow {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3)
+}
+
+.text-shadow-light {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1)
 }
 
 .home-header-cover {
@@ -154,16 +193,16 @@ $themeColor-dark: #FD9D00;
     }
 }
 
-.swiper-container {
+.top-cover-swiper-container {
     margin: 0px;
 }
 
-.swiper-slide {
+.top-cover-swiper-slide {
     width: 100%!important;
     &.swiper-slide-active {}
 }
 
-.swiper-pagination {
+.cover-swiper-pagination {
     // bottom: -10px!important;
 }
 
@@ -177,22 +216,23 @@ $themeColor-dark: #FD9D00;
     }
 }
 
-.swiper-pagination-bullet {
-    background: none;
-    margin-left: 5px;
-    font-size: 22px;
-    width: 30px;
-    height: 30px;
+.cover-swiper-pagination {
     text-align: center;
-    line-height: 36px;
-    color: black;
-    opacity: 1;
-    font-weight: 500;
-}
-
-.swiper-pagination-bullet-active {
-    border: 1.5px solid white;
-    color: white;
+    .swiper-pagination-bullet {
+        background: none;
+        margin-left: 5px;
+        font-size: 22px;
+        width: 30px;
+        height: 30px;
+        line-height: 36px;
+        color: black;
+        opacity: 1;
+        font-weight: 500;
+    }
+    .swiper-pagination-bullet-active {
+        border: 1.5px solid white;
+        color: white;
+    }
 }
 
 .swiper-button-prev,
@@ -217,27 +257,27 @@ $themeColor-dark: #FD9D00;
     &:after {
         font-size: 16px;
         font-weight: bold;
+        transition: 0.3s;
+    }
+    &:hover {
+        &:after {
+            margin-top: 7px;
+        }
     }
 }
 
 .swiper-button-next {
     @include screentwo-max {
-        right: -30px;
+        // right: -30px;
     }
     &:after {
         transform: rotate(360deg);
         margin-top: 15px;
         margin-left: 5px;
-        @include screentwo-max {
-            margin-left: 7px;
-        }
     }
 }
 
 .swiper-button-prev {
-    @include screentwo-max {
-        left: -30px;
-    }
     -webkit-writing-mode: vertical-lr;
     -moz-writing-mode: vertical-lr;
     -ms-writing-mode: vertical-lr;
@@ -248,9 +288,6 @@ $themeColor-dark: #FD9D00;
         transform: rotate(180deg);
         margin-top: 15px;
         margin-left: 5px;
-        @include screentwo-max {
-            margin-left: 7px;
-        }
     }
 }
 
@@ -259,3 +296,83 @@ $themeColor-dark: #FD9D00;
     border-radius: 50%;
     overflow: hidden;
 }
+
+// =============== Featured Section Start ===============
+.featured-item {
+    transition: 0.3s;
+    border: 1px solid transparent;
+    .featured-item-title {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .featured-item-price {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    &:hover {
+        border-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.03);
+        .featured-item-title {
+            top: 20px;
+            opacity: 1;
+        }
+        .featured-item-price {
+            bottom: 20px;
+            opacity: 1;
+        }
+    }
+}
+
+// =============== Featured Section End ===============
+// =============== News Section Start ===============
+.news-section-wrapper {}
+
+.news-shadow {
+    box-shadow: -12px 2px 11px 5px rgba(0, 0, 0, .03), 11px -8px 14px 0px rgba(0, 0, 0, .03);
+}
+
+.news-swiper-button-next {
+    right: -45px;
+    top: 35px;
+}
+
+.news-swiper-button-prev {
+    left: -45px;
+    top: 35px;
+}
+
+// .news-swiper-button-next
+// .news-swiper-button-prev {
+// }
+// =============== News Section End ===============
+// =============== Partners Section start ===============
+.partner-swiper-wrapper {
+    .swiper-slide {
+        background-color: rgba(0, 0, 0, 0.04);
+        img {
+            filter: grayscale(1);
+            transition: 0.3s;
+        }
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+
+.partner-carousel-arrows {
+    .arrow {
+        line-height: 3.7rem;
+    }
+}
+
+// =============== Partners Section End ===============
