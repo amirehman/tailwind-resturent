@@ -41,6 +41,11 @@ $themeColor-dark: #FD9D00;
             height: 100vh;
         }
     }
+    &.autoheight {
+        @include screentwo-max {
+            height: auto;
+        }
+    }
 }
 
 .h-screen-85 {
@@ -371,7 +376,7 @@ $themeColor-dark: #FD9D00;
 
 .partner-carousel-arrows {
     .arrow {
-        line-height: 3.7rem;
+        // line-height: 3.7rem;
     }
 }
 

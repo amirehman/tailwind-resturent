@@ -75,4 +75,20 @@ jQuery(document).ready(function() {
         }
     })
 
+    // ---------------------- //
+    var mySwiper = new Swiper('.video-swiper-container', {
+        slidesPerView: 'auto',
+        effect: 'fade',
+        loop: true,
+        fadeEffect: {
+            crossFade: true
+        },
+        navigation: {
+            nextEl: '.video-swiper-button-next',
+            prevEl: '.video-swiper-button-prev',
+        },
+    })
+
+    $(".video-carousel-modal").modalVideo();
+
 })
