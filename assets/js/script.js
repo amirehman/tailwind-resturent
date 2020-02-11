@@ -91,4 +91,21 @@ jQuery(document).ready(function() {
 
     $(".video-carousel-modal").modalVideo();
 
+    // =============== Search Modal ==================== //
+
+
+    $('#searchButton').click('on', function() {
+        Swal.fire({
+            position: 'top-start',
+            title: 'Search anything...',
+            input: 'text',
+            showClass: {
+                popup: 'animated fadeInDown faster'
+            },
+            hideClass: {
+                popup: 'animated fadeOutUp faster'
+            }
+        })
+    })
+
 })

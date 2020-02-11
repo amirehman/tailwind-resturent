@@ -7,13 +7,14 @@
     <meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1">
     <title>TailwindCSS Resturent by getidea.net</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/GrayGrids/LineIcons/LineIcons.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/lib/modal-video.min.css">
     <link rel="stylesheet" href="assets/css/stylesheets/screen.css ">
 </head>
 
-<body class="pb-64 mb-64">
+<body>
 
     <!-- main wrapper start -->
     <div class="main-wrapper ">
@@ -116,7 +117,7 @@
 
                             <div class="w-2/3 lg:w-full text-center flex items-baseline justify-center h-8 ">
                                 <div class="inner ">
-                                    <h1 class="text-logo text-xl lg:text-2xl tracking-widest text-gray-900 mb-0 inline-block font-semibold text-shadow ">
+                                    <h1 class="text-logo text-xl lg:text-2xl tracking-widest text-gray-900 mb-0 inline-block font-semibold text-shadow">
                                         Tailwind Resturent</h1>
                                     <!-- text logo end-->
                                 </div>
@@ -128,9 +129,9 @@
                                 <div class="inner">
                                     <ul class="megamenu-grid links-list flex items-center justify-center h-8 pb-2 ">
                                         <li class="hidden lg:block">
-                                            <a class="block px-3 text-xl " href=" ">
+                                            <span id="searchButton" class="cursor-pointer block px-3 text-xl">
                                                 <i class="lni-search block "></i>
-                                            </a>
+                                            </span>
                                         </li class="hidden lg:block">
                                         <li class="hidden lg:block">
                                             <a class="block px-3 text-xl " href=" ">
@@ -880,7 +881,7 @@
 
 
         <!-- contact section start -->
-        <section class="contact-section relative">
+        <section class="contact-section relative mt-16">
             <div class="hidden lg:flex flex-wrap">
                 <div class="w-full lg:w-1/2 ml-auto h-auto lg:h-screen">
                     <div class="inner">
@@ -908,7 +909,7 @@
                 </div>
             </div>
 
-            <div class="absolute left-0 top-0 w-full h-auto lg:h-screen py-12 lg:py-0">
+            <div class="lg:absolute left-0 top-0 w-full h-auto lg:h-screen py-12 lg:py-0">
                 <div class="container mx-auto ">
                     <div class="flex flex-wrap">
                         <div class="w-full lg:w-1/2 h-auto lg:h-screen flex items-center py-0 lg:py-16">
@@ -984,6 +985,82 @@
         <!-- contact section end -->
 
 
+        <!-- footer start here -->
+        <footer class="mt-16 py-24 border-t">
+            <div class="container mx-auto">
+                <div class="inner mx-3">
+                    <div class="flex flex-wrap">
+                        <div class="w-full lg:w-1/3">
+                            <div class="inner">
+                                <div class="flex">
+                                    <div class="w-1/2 text-center lg:text-left">
+                                        <div class="inner">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="text-sm text-gray-800 hover:text-black transition uppercase font-semibold tracking-wider">Menu</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-sm text-gray-800 hover:text-black transition uppercase font-semibold tracking-wider">About Us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-sm text-gray-800 hover:text-black transition uppercase font-semibold tracking-wider">Delivery</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- column end -->
+                                    <div class="w-1/2 text-center lg:text-left">
+                                        <div class="inner">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="text-sm text-gray-800 hover:text-black transition uppercase font-semibold tracking-wider">join us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-sm text-gray-800 hover:text-black transition uppercase font-semibold tracking-wider">partners</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-sm text-gray-800 hover:text-black transition uppercase font-semibold tracking-wider">special offers</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- column end -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/3 my-16 lg:my-0 flex justify-center items-center">
+                            <div class="inner px-3">
+                                <div>
+                                    <span class="text-logo text-xl lg:text-2xl tracking-widest text-gray-900 mb-0 inline-block font-semibold text-shadow">Tailwind Resturent</span>
+                                    <ul class="social flex items-center justify-center text-2xl mt-1">
+                                        <li><a href="#" class="inline-block mx-1"><i class="lni-facebook-original"></i></a></li>
+                                        <li><a href="#" class="inline-block mx-1"><i class="lni-twitter-original"></i></a></li>
+                                        <li><a href="#" class="inline-block mx-1"><i class="lni-linkedin-original"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/3 flex items-center justify-center">
+                            <div class="inner w-full">
+                                <form action="" class="border border-transparent focus:border-gray-300 hover:border-gray-300">
+                                    <input type="text" placeholder="ENTER E-MAIL" class="border-b border-gray-300 w-full p-2 pb-1 text-base focus:outline-none focus:border-gray-500">
+                                    <button type="submit" class="block focus:bg-black focus:text-white clearfix w-full hover:bg-black hover:text-white p-2 font-sans text-left uppercase text-sm tracking-wider focus:outline-none">
+                                        <span class="block float-left">Subscribe</span>
+                                        <span class="block float-right">→</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end here -->
+
+
     </div>
     <!-- main wrapper end -->
 
@@ -1012,6 +1089,7 @@
     <script src="assets/js/lib/masonry.pkgd.min.js "></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="assets/js/lib/jquery-modal-video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.7.2/dist/sweetalert2.all.min.js"></script>
     <script src="assets/js/script.js"></script>
 
 
