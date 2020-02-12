@@ -108,4 +108,22 @@ jQuery(document).ready(function() {
         })
     })
 
+    // =============== Mobile Side Filter Menu ==================== //
+
+    $('#filterMenuSide,#openFilterSideMenu').on('click', function(e) {
+        e.stopPropagation();
+    });
+
+
+    $(document).on('click', function(e) {
+        $('#filterMenuSide').removeClass('active');
+        $('body').removeClass('overlay');
+    });
+
+    $('#openFilterSideMenu').on('click', function() {
+        $('#filterMenuSide').addClass('active');
+        $('body').addClass('overlay');
+    });
+
+
 })
