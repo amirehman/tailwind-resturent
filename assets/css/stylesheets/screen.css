@@ -434,59 +434,117 @@ body.overlay:after {
   justify-content: center !important;
 }
 
-/* line 409, ../sass/screen.scss */
-.swal2-popup {
+/* line 410, ../sass/screen.scss */
+body.front-page .swal2-popup {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-image: linear-gradient(190deg, #FEB201 0%, #b16e00 100%) !important;
 }
 /* line 414, ../sass/screen.scss */
-.swal2-popup .swal2-title {
+body.front-page .swal2-popup .swal2-title {
   color: black;
   text-align: left;
   margin: 0px !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
-/* line 419, ../sass/screen.scss */
-.swal2-popup .swal2-styled.swal2-confirm {
+/* line 420, ../sass/screen.scss */
+body.front-page .swal2-popup .swal2-styled.swal2-confirm {
   background-image: linear-gradient(190deg, #FEB201 0%, #b16e00 100%) !important;
 }
-/* line 422, ../sass/screen.scss */
-.swal2-popup .swal2-input {
+/* line 423, ../sass/screen.scss */
+body.front-page .swal2-popup .swal2-input {
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
   font-family: sans-serif;
 }
+/* line 427, ../sass/screen.scss */
+body.front-page .swal2-popup .swal2-input:focus {
+  outline: none;
+}
 
-/* line 431, ../sass/screen.scss */
+/* line 434, ../sass/screen.scss */
+.swal2-popup {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+/* line 436, ../sass/screen.scss */
+.swal2-popup .swal2-title {
+  color: rgba(0, 0, 0, 0.9);
+  text-align: left;
+  margin: 0px !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* line 442, ../sass/screen.scss */
+.swal2-popup .swal2-styled.swal2-confirm {
+  background-color: black;
+}
+/* line 445, ../sass/screen.scss */
+.swal2-popup .swal2-input {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: sans-serif;
+}
+/* line 449, ../sass/screen.scss */
+.swal2-popup .swal2-input:focus {
+  outline: none;
+}
+
+/* line 457, ../sass/screen.scss */
 .filtermenu-side {
   left: -900px;
   transition: 0.3s;
   /* Handle */
   /* Handle on hover */
 }
-/* line 434, ../sass/screen.scss */
+/* line 460, ../sass/screen.scss */
 .filtermenu-side.active {
   left: 0px;
 }
 @media only screen and (max-width: 991px) {
-  /* line 431, ../sass/screen.scss */
+  /* line 457, ../sass/screen.scss */
   .filtermenu-side {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 17px -11px 15px 5px rgba(0, 0, 0, 0.04);
   }
 }
-/* line 440, ../sass/screen.scss */
+/* line 466, ../sass/screen.scss */
 .filtermenu-side::-webkit-scrollbar {
   width: 0px;
 }
-/* line 443, ../sass/screen.scss */
+/* line 469, ../sass/screen.scss */
 .filtermenu-side::-webkit-scrollbar-track {
   background: white;
 }
-/* line 447, ../sass/screen.scss */
+/* line 473, ../sass/screen.scss */
 .filtermenu-side::-webkit-scrollbar-thumb {
   background: lightgray;
 }
-/* line 451, ../sass/screen.scss */
+/* line 477, ../sass/screen.scss */
 .filtermenu-side::-webkit-scrollbar-thumb:hover {
   background: gray;
+}
+
+/* line 484, ../sass/screen.scss */
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+}
+
+/* line 490, ../sass/screen.scss */
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+
+/* line 496, ../sass/screen.scss */
+.rating span.star:hover:before,
+.rating span.star:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  color: #FEB201;
+}
+
+/* line 504, ../sass/screen.scss */
+.content p {
+  margin-bottom: 15px;
 }
